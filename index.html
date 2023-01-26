@@ -3,30 +3,31 @@
 	<head>
 		<title>telnet.sh</title>
 	</head>
-	<body>
+	<body style="margin: 0; padding:0;">
 		<div id="fTelnetContainer" class="fTelnetContainer"></div>
 		<script>document.write('<script src="//embed-v2.ftelnet.ca/js/ftelnet-loader.norip.noxfer.js?v=' + (new Date()).getTime() + '"><\/script>');</script>
 		<script>
-			var Options = new fTelnetOptions();
-			Options.BareLFtoCRLF = false;
-			Options.BitsPerSecond = 115200;
-			Options.ConnectionType = 'telnet';
-			Options.Emulation = 'ansi-bbs';
-			Options.Enter = '\r';
-			Options.Font = 'CP437';
-			Options.ForceWss = false;
-			Options.Hostname = 'torsbrink.ddns.net';
-			Options.LocalEcho = false;
-			Options.NegotiateLocalEcho = true;
-			Options.Port = 2023;
-			Options.ProxyHostname = 'p-eu.ftelnet.ca';
-			Options.ProxyPort = 80;
-			Options.ProxyPortSecure = 443;
-			Options.ScreenColumns = 80;
-			Options.ScreenRows = 25;
-			Options.SendLocation = false;
-			var fTelnet = new fTelnetClient('fTelnetContainer', Options);
-			fTelnet.Connect();
-			</script>
+		    var Options = new fTelnetOptions();
+		    Options.BareLFtoCRLF = false;
+		    Options.BitsPerSecond = 115200;
+		    Options.ConnectionType = 'telnet';
+		    Options.Emulation = 'ansi-bbs';
+		    Options.Enter = '\r';
+		    Options.Font = 'CP437';
+		    Options.ForceWss = false;
+		    Options.Hostname = 'torsbrink.ddns.net';
+		    Options.LocalEcho = false;
+		    Options.NegotiateLocalEcho = true;
+		    Options.Port = 2023;
+		    Options.ProxyHostname = 'p-eu.ftelnet.ca';
+		    Options.ProxyPort = 80;
+		    Options.ProxyPortSecure = 443;
+		    Options.ScreenColumns = 80;
+		    Options.ScreenRows = 25;
+		    Options.SendLocation = false;
+		    Options.VirtualKeyboardVisible = false;
+		    Options.SplashScreen = 'UHJlc3MgJ0Nvbm5lY3QnIHRvIHN0YXJ0IHBsYXlpbmch';
+		    var fTelnet = new fTelnetClient('fTelnetContainer', Options);
+		</script>
 	</body>
 </html> 
